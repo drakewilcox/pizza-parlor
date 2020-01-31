@@ -1,8 +1,8 @@
 // BUSINESS LOGIC
-function PizzaOrder(sizeResponse, toppingResponse, premiumResponse) {
+function PizzaOrder(sizeResponse, toppingsResponse, premiumResponse) {
   this.standardPrice = 7
   this.sizeResponse = sizeResponse,
-  this.toppingsResponse = toppingResponse,
+  this.toppingsResponse = toppingsResponse,
   this.premiumResponse = premiumResponse;
 }
 
@@ -18,10 +18,17 @@ PizzaOrder.prototype.getPrice = function() {
   if (this.sizeResponse === "md") {
     upCharge += 3;
   } else if (this.sizeResponse === "lg") {
-    upCharge += 2;
+    upCharge += 5;
   }
-  console.log(this.standardPrice + upCharge);
+  if (this.toppingsResponse.length === 1) {
+    upCharge += 1;
+  }
+  // for (let index = 0; index < this.toppingsResponse.length; index += 1) {
+  //   toppingsAmount = this.toppingsResponse.indexOf("");
+  //   upcharge = (toppingsAmount +=1);
 
+  // }
+  // console.log(this.standardPrice + upCharge);
 }
 
 
