@@ -20,14 +20,12 @@ PizzaOrder.prototype.getPrice = function() {
   } else if (this.sizeResponse === "lg") {
     upCharge += 5;
   }
-  if (this.toppingsResponse.length === 1) {
-    upCharge += 1;
-    
+  var toppingsAmount = ((this.toppingsResponse.length) * 0.5); 
+  var premiumAmount = this.premiumResponse.length * 2;
+  console.log(toppingsAmount);
+  return this.standardPrice + toppingsAmount + premiumAmount + upCharge 
   }
-  var toppingsAmount = this.toppingsResponse.length; {
-    return this.standardPrice + toppingsAmount + upCharge;
-  }
-}
+
 
 
 function makeOrder() {
