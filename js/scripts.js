@@ -22,13 +22,11 @@ PizzaOrder.prototype.getPrice = function() {
   }
   if (this.toppingsResponse.length === 1) {
     upCharge += 1;
+    
   }
-  // for (let index = 0; index < this.toppingsResponse.length; index += 1) {
-  //   toppingsAmount = this.toppingsResponse.indexOf("");
-  //   upcharge = (toppingsAmount +=1);
-
-  // }
-  // console.log(this.standardPrice + upCharge);
+  var toppingsAmount = this.toppingsResponse.length; {
+    return this.standardPrice + toppingsAmount + upCharge;
+  }
 }
 
 
