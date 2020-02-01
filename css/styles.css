@@ -1,9 +1,4 @@
-body {
-  font-family: 'Roboto';
-  background-color: rgb(15, 155, 155, 0.3);
-  color: black;
- 
-}
+
 h1  {
   font-size: 60px;
   padding: 5px;
@@ -13,8 +8,29 @@ h1, h3 {
   font-family: 'Bebas Neue';
 }
 .form-control {
-  width: 25%;
+  width: 100px;
 }
 .output {
   display: none;
+}
+body {
+  background-color: rgb(15, 155, 155, 0.3);
+  color: black;
+  font-family: 'Roboto';
+}
+.grid-container {
+  padding: ;
+  display: flex;
+  justify-content: center;
+}
+.grid-form {
+  display: flex;
+  margin: 20px;
+  /* width: 50%; */
+}
+.card-header  {
+  background-color: beige;
+}
+.card {
+  background-color: rgb(245, 245, 220);
 }
