@@ -1,6 +1,6 @@
 // BUSINESS LOGIC
 function PizzaOrder(sizeResponse, toppingsResponse, premiumResponse) {
-  this.standardPrice = 7
+  this.standardPrice = 7.50
   this.sizeResponse = sizeResponse,
   this.toppingsResponse = toppingsResponse,
   this.premiumResponse = premiumResponse;
@@ -18,10 +18,10 @@ PizzaOrder.prototype.getPrice = function() {
   } else if (this.sizeResponse === "lg") {
     upCharge += 5;
   }
-  var toppingsAmount = ((this.toppingsResponse.length) * 0.5); 
-  var premiumAmount = this.premiumResponse.length * 2;
+  var toppingsAmount = ((this.toppingsResponse.length) * 0.51); 
+  var premiumAmount = this.premiumResponse.length * 2.1;
   console.log(toppingsAmount);
-  return this.standardPrice + toppingsAmount + premiumAmount + upCharge 
+  return this.standardPrice + toppingsAmount + premiumAmount + upCharge; 
   }
 
 function makeOrder() {
@@ -44,7 +44,8 @@ function makeOrder() {
   pizzaOrder.update(sizeResponse, toppingsResponse, premiumResponse)
   
   var pizzaPrice = pizzaOrder.getPrice();
-  console.log(pizzaPrice);
+  $("#output").text("$" + pizzaPrice);
+  $(".output").show();
 }
 // USER LOGIC 
 var pizzaOrder = new PizzaOrder();

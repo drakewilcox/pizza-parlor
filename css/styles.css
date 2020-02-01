@@ -2,6 +2,7 @@ body {
   font-family: 'Roboto';
   background-color: rgb(15, 155, 155, 0.3);
   color: black;
+ 
 }
 h1  {
   font-size: 60px;
@@ -13,4 +14,7 @@ h1, h3 {
 }
 .form-control {
   width: 25%;
+}
+.output {
+  display: none;
 }
