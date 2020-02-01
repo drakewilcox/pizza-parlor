@@ -1,7 +1,16 @@
 body {
   font-family: 'Roboto';
+  background-color: rgb(15, 155, 155, 0.3);
+  color: black;
 }
-
+h1  {
+  font-size: 60px;
+  padding: 5px;
+  background-color: rgb(248, 207, 130);
+}
 h1, h3 {
   font-family: 'Bebas Neue';
+}
+.form-control {
+  width: 25%;
 }
