@@ -1,6 +1,6 @@
 // BUSINESS LOGIC
 function PizzaOrder(sizeResponse, toppingsResponse, premiumResponse) {
-  this.standardPrice = 7.50
+  this.standardPrice = 7
   this.sizeResponse = sizeResponse,
   this.toppingsResponse = toppingsResponse,
   this.premiumResponse = premiumResponse;
@@ -9,36 +9,32 @@ PizzaOrder.prototype.update = function(sizeResponse, toppingsResponse, premiumRe
   this.sizeResponse = sizeResponse,
   this.toppingsResponse = toppingsResponse,
   this.premiumResponse = premiumResponse;
-  console.log(pizzaOrder);
 }
 PizzaOrder.prototype.getPrice = function() {
-  var upCharge = 0
-  if (this.sizeResponse === "md") {
-    upCharge += 3;
+  var upCharge = 0;
+  if (this.sizeResponse === "sm") {
+    upCharge = 0;
+  } if (this.sizeResponse === "md") {
+    upCharge += 2;
   } else if (this.sizeResponse === "lg") {
-    upCharge += 5;
+    upCharge += 3;
   }
-  var toppingsAmount = ((this.toppingsResponse.length) * 0.51); 
-  var premiumAmount = this.premiumResponse.length * 2.1;
-  console.log(toppingsAmount);
+  var toppingsAmount = parseInt(this.toppingsResponse.length) * .50; 
+  var premiumAmount = parseInt(this.premiumResponse.length) * 1;
   return this.standardPrice + toppingsAmount + premiumAmount + upCharge; 
   }
-
 function makeOrder() {
   var sizeResponse = $("#size").val();
   var toppingsResponse = [];
   var premiumResponse = [];
-  console.log(sizeResponse);
   
   $("input:checkbox[name=toppings]:checked").each(function() {
     var toppings = $(this).val();
     toppingsResponse.push(toppings);
-    console.log(toppingsResponse);
   });
   $("input:checkbox[name=premium]:checked").each(function() {
     var premium = $(this).val();
     premiumResponse.push(premium);
-    console.log(premiumResponse);
   });
   
   pizzaOrder.update(sizeResponse, toppingsResponse, premiumResponse)

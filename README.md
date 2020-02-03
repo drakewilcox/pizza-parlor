@@ -6,40 +6,31 @@
 
 ## Description
 
-_{This Project is an exercise in using objecte oriented JavaScript. The application allows users to select options for a pizza order, and calculates the price based on the size and toppings of the pizza.}_
+_This Project is an exercise in using object oriented JavaScript. The application allows users to select options for a pizza order, and calculates the price based the selections. The price output varies on which size is selected, and on the amount of toppings and premium toppings were selected._
 
 ## Specifications
-
-User to selects the size and toppings of a pizza an results are displayed INPUT: Small, Cheese, 2 Topping OUTPUT: Small, Cheese, 2 topping
-
-Displays a price based on the input of size of pizza. INPUT: Small OUTPUT: $7 
-
-The the price is increased when the selects a larger size of pizza INPUT: Medium OUTPUT: $10
-
-ouput price is increased when the user selects toppings: INPUT: Medium, Olives OUTPUT: $11
-
-Output price is increased when the user selects veggie and protein toppings: INPUT: Medium, Olive, Pepperoni OUTPUT: $13
-
-
-
+| BEHAVIOR | INPUT | OUTPUT|
+|----------|-------|-------|
+|User selects the size and toppings of a pizza and a Price is displayed | Small, 2 Topping | Price |
+|Displays a price based on the input of size of pizza | Small | $7 |
+|The price is increased when the uaer selects a larger size of pizza | Medium | $9 |
+|Ouput price is increased based on number of toppings | Medium, Olives, Jalepenos | $10 |
+|Output price is increased when the user selects veggie and premium toppings | Medium, Olive, Pepperoni | $10.50 |
 
 ## Setup/Installation Requirements
 
-* _Clone this repository to your desktop_
-* _For a mac, run the following commands from your home terminal to view the page_
-* _cd-desktop_
+* _To open project, download a .zip file by clicking the "clone or download" button on the repository page._ 
+* _Open the folder after uncompressing the file, and click the index.html link to open in the browser._
+* _To open via a Command Line Interface:_
+* _On a mac, open the terminal and run the following commands from you home directory to clone and open the repository._ 
+* _cd desktop_
+* _git clone https://github.com/drakewilcox/pizza-parlor_
 * _cd pizza-parlor_
-* _open index.html in your browser_
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+* _open index.html_
 
 ## Known Bugs
 
-__
-
-## Support and contact details
-
-__
+_No known bugs at this time_
 
 ## Technologies Used
 
@@ -51,6 +42,6 @@ __
 
 ### License
 
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
+*This software is licensed under the MIT license*
 
 Copyright (c) 2020 **_Drake Wilcox_**
